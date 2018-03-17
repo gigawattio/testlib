@@ -10,7 +10,7 @@ func Test_SkipEmptyOSsPanic(t *testing.T) {
 		if r := recover(); r != nil {
 			recoveredMessage := fmt.Sprintf("%s", r)
 			if recoveredMessage != SkipUnlessOSIllegalInvocation {
-				t.Error(`Recovered message "%s" did not match expected message "%s"`, recoveredMessage, SkipUnlessOSIllegalInvocation)
+				t.Errorf(`Recovered message "%s" did not match expected message "%s"`, recoveredMessage, SkipUnlessOSIllegalInvocation)
 			} else {
 				t.Log("Successfully generated a panic by invoking `SkipUnlessOS' with empty allowed OS's")
 			}
