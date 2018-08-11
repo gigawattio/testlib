@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
 func WaitUntil(what string, waitTimeout time.Duration, fn func() bool, pause ...time.Duration) error {
